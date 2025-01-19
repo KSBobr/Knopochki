@@ -9,11 +9,6 @@ users = {}
 def hello():
     return 'Hello, World!'
 
-@app.route('/greet')
-def greet():
-    name = request.args.get('name', 'Guest')
-    return f'Hello, {name}!'
-
 @app.route('/submit', methods=['POST'])
 def submit():
     data = request.json
